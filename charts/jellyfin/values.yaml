@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: docker.io/jellyfin/jellyfin
-  tag: latest
+  tag: "10.9.0"
   pullPolicy: IfNotPresent
 
 nameOverride: ""
@@ -19,7 +19,7 @@ fullnameOverride: ""
 enableDLNA: false
 
 service:
-  type: ClusterIP
+  type: LoadBalancer
   port: 8096
   ## Specify the nodePort value for the LoadBalancer and NodePort service types.
   ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport
